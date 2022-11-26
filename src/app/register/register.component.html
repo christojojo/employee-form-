@@ -1,0 +1,43 @@
+<h1 class="text-center">Employee Form</h1>
+<div class="form-group container w-25 bg-secondary mt-3 p-3 rounded">
+    <form [formGroup]="employeeform" (ngSubmit)="register()">
+
+        <div class="mt-2 p-2"> <input id="ename" type="text" class="form-control" placeholder="Employee name"
+                formControlName="Name"></div>
+        <div><textarea class="form-control ms-2 mt-2" id="exampleFormControlTextarea1" rows="2"
+                placeholder="Address"></textarea></div>
+        <div class=" mt-2 p-2"> <input id="adrs" type="text" class="form-control" placeholder="DOB"> </div>
+
+        <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle ms-2 mt-2" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Role
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">admin</a></li>
+                <li><a class="dropdown-item" href="#">manager </a></li>
+                <li><a class="dropdown-item" href="#">HR</a></li>
+                <li><a class="dropdown-item" href="#">developer</a></li>
+
+            </ul>
+        </div>
+        <!-- <div class="mt-2 p-2"> <input id="desig" type="text" class="form-control"placeholder="Role"></div> -->
+        <div class="mt-2 p-2"> <input id="phone" type="text" class="form-control" placeholder="phone"></div>
+        <div class="mt-2 p-2">
+            <div class="form-check text-white">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+               Male
+                </label>
+              </div>
+              <div class="form-check text-white">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Female
+                </label>
+              </div>
+            <!-- <input id="gender" type="text" class="form-control" placeholder="gender"> -->
+        </div>
+        <div class="p-2 mt-2 text-center"><button type="button" onclick="register()" class="btn btn-success">Register</button></div>
+    </form>
+</div>
